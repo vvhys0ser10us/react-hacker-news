@@ -28,6 +28,9 @@ const reducer = (state, action) => {
     case HANDLE_SEARCH:
       return { ...state, query: action.payload, page: 0 }
 
+    case HANDLE_PAGE:
+      return { ...state, page: action.payload }
+
     default:
       throw new Error(`no matching '${action.type}' action type`)
   }
